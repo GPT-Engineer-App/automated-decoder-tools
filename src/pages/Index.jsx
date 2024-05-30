@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Container, Text, VStack, Input, Button, Textarea, Box, Heading, HStack, IconButton, Image } from "@chakra-ui/react";
+import { Container, Text, VStack, Input, Button, Textarea, Box, Heading, HStack, IconButton, Image, Link } from "@chakra-ui/react";
 import { FaLock, FaUnlock, FaImage, FaSearch } from "react-icons/fa";
+import { Link as RouterLink } from "react-router-dom";
 
 const Index = () => {
   const [inputText, setInputText] = useState("");
@@ -10,8 +11,7 @@ const Index = () => {
   const handleTextChange = (e) => setInputText(e.target.value);
 
   const handleDecodeSteganography = () => {
-    // Placeholder for steganography decoding logic
-    setOutputText("Decoded steganography text: [Placeholder]");
+    window.open("https://colab.research.google.com/drive/1lzJdYhmjusQxJKZQTnoGU9WUqsaEvxIC", "_blank");
   };
 
   const handleCipherAnalysis = () => {
